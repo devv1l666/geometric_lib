@@ -3,7 +3,7 @@ import square
 
 figs = ['circle', 'square']
 funcs = ['perimeter', 'area']
-sizes = {'perimeter-circle': 1, 'area-circle': 1, 'perimeter-square': 1, 'area-square': 1}
+sizes = {'per-circ': 1, 'area-circ': 1, 'per-squ': 1, 'area-squ': 1}
 
 
 def calc(fig1, func1, size1):
@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
         while func not in funcs:
             func = input(f"Enter function name, available are {funcs}:\n")
-        temp = "Input figure sizes separated by space, 1 for circle and square\n"
+        temp = "Input figure sizes, 1 for circle and square\n"
         while len(size) != sizes[f"{func}-{fig}"]:
             size = list(map(int, input(temp).split(' ')))
 
