@@ -6,7 +6,7 @@ from calculate import calc
 class TestGeometricLib(unittest.TestCase):
 
     def test_calc_circle_perimeter(self):
-        self.assertAlmostEqual(calc('circle', 'perimeter', [5]), 2*math.pi*5)
+        self.assertAlmostEqual(calc('circle', 'perimeter', [5]), 2 * math.pi * 5)
 
     def test_calc_circle_area(self):
         self.assertAlmostEqual(calc('circle', 'area', [5]), math.pi * 5**2)
