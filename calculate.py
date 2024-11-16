@@ -1,4 +1,3 @@
-# flake8: ignore=F401
 import circle
 import square
 
