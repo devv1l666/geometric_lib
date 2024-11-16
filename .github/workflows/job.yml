@@ -3,7 +3,7 @@ name: Workflow_job for Geometric Library
 on:
   push:
     branches:
-      [main release]
+      [main, release]
   pull_request:
     branches:
       [master, release, develop]
