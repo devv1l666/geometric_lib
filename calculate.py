@@ -24,9 +24,8 @@ if __name__ == "__main__":
 
         while func not in funcs:
             func = input(f"Enter function name, available are {funcs}:\n")
-
+        temp = "Input figure sizes separated by space, 1 for circle and square\n"
         while len(size) != sizes[f"{func}-{fig}"]:
-            temp = "Input figure sizes separated by space, 1 for circle and square\n"
             size = list(map(int, input(temp).split(' ')))
 
     calc(fig, func, size)
