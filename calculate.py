@@ -1,3 +1,4 @@
+# flake8: ignore=F403
 import circle
 import square
 
@@ -29,7 +30,3 @@ if __name__ == "__main__":
             size = list(map(int, input(temp).split(' ')))
 
     calc(fig, func, size)
-
-
-square.area(3)
-circle.area(3)

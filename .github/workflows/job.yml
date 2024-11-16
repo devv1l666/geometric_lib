@@ -3,7 +3,7 @@ name: Workflow_job for Geometric Library
 on:
   push:
     branches:
-      [main realise]
+      [main release]
   pull_request:
     branches:
       [master, release, develop]
@@ -12,12 +12,14 @@ jobs:
   test:
     runs-on:
       ubuntu-latest
-
+    env:
+      full_name: "Никольцев Владимир Александрович"
+      group: "М3114"
     steps:
       - name:
           Display User Info
         run: |
-          echo "Name: "Никольцев Владимир Александрович", Group: "М3114", Github Username: ${{ github.actor }}"
+          echo "Name: ${{ env.full_name }}, Group: ${{ env.group }}, Github Username: ${{ github.actor }}"
 
       - name:
           Checkout
