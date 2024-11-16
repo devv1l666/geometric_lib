@@ -1,0 +1,45 @@
+name: Workflow_job for Geometric Library
+
+on:
+  push:
+    branches:
+      [main, release]
+  pull_request:
+    branches:
+      [master, release, develop]
+
+jobs:
+  test:
+    runs-on:
+      ubuntu-latest
+    env:
+      full_name: "Никольцев Владимир Александрович"
+      group: "М3114"
+    steps:
+      - name:
+          Display User Info
+        run: |
+          echo "Name: ${{ env.full_name }}, Group: ${{ env.group }}, Github Username: ${{ github.actor }}"
+
+      - name:
+          Checkout
+        uses:
+          actions/checkout@v2
+
+      - name:
+          Set up Python
+        uses:
+          actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name:
+          Running tests for geometric lib
+        run:
+          python -m unittest discover -s tests -p "test_*.py"
+
+      - name:
+          Using Flake8
+        run: |
+          pip install flake8
+          flake8 --ignore=F401,E501 .
