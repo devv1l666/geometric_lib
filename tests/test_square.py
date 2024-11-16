@@ -2,7 +2,7 @@ import unittest
 from square import area, perimeter
 
 
-class MyTestCase(unittest.TestCase):
+class SquareTestCase(unittest.TestCase):
     def test_square_perimeter_true(self):
         a = 5
         expected = 4 * a

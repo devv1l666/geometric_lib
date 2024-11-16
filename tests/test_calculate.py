@@ -3,7 +3,7 @@ import math
 from calculate import calc
 
 
-class TestGeometricLib(unittest.TestCase):
+class GeometricLibTestCase(unittest.TestCase):
 
     def test_calc_circle_perimeter(self):
         self.assertAlmostEqual(calc('circle', 'perimeter', [5]), 2 * math.pi * 5)

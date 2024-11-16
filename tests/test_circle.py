@@ -3,7 +3,7 @@ import math
 from circle import area, perimeter
 
 
-class MyTestCase(unittest.TestCase):
+class CircleTestCase(unittest.TestCase):
     def test_circle_perimeter_true(self):
         r = 5
         expected = 2 * math.pi * r

@@ -2,7 +2,7 @@ import unittest
 from triangle import area, perimeter
 
 
-class MyTestCase(unittest.TestCase):
+class TriangleTestCase(unittest.TestCase):
     def test_triangle_perimeter_true(self):
         a = 5
         b = 3
